@@ -1,0 +1,140 @@
+/* ResortSection.css */
+.resort-section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-heading-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-heading-text {
+  max-width: 500px;
+}
+
+.pre-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: var(--color-gold);
+}
+
+.heading-holder {
+  font-family: var(--font-secondary);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.heading-holder p {
+  margin: 0;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.description p {
+  margin-bottom: 15px;
+}
+
+.section-heading-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+.image {
+  position: relative;
+}
+
+.first-img-container {
+  margin-top: -50px;
+}
+
+.second-img-container {
+  margin-top: 50px;
+}
+
+.vue-responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.anim-img {
+  transition: transform 0.3s ease;
+}
+
+.anim-img:hover {
+  transform: translateY(-10px);
+}
+
+.hidden-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hidden-image-right {
+  left: auto;
+  right: 0;
+}
+
+.image:hover .hidden-image {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .section-heading-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .section-heading-images {
+    order: -1;
+  }
+  
+  .first-img-container {
+    margin-top: 0;
+  }
+  
+  .second-img-container {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .resort-section {
+    padding: 60px 0;
+  }
+  
+  .heading-holder {
+    font-size: 2.5rem;
+  }
+  
+  .section-heading-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

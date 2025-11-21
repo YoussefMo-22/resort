@@ -1,0 +1,115 @@
+
+/* App.css */
+:root {
+  --color-gold: #AD986E;
+  --color-dark: #30332E;
+  --color-light: #F7F5F0;
+  --color-white: #FFFFFF;
+  --color-beige: #EAE5DB;
+  --color-light-gray: #F4F4F4;
+  --font-primary: 'Effra', sans-serif;
+  --font-secondary: 'Chronicle Display', serif;
+  --font-tertiary: 'Baskerville', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+}
+
+.page-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.block-animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: blockAnimateUp 0.8s ease forwards;
+}
+
+@keyframes blockAnimateUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.gold-header {
+  color: var(--color-gold);
+}
+
+.cta-anchor {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.cta-anchor-after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.cta-anchor:hover .cta-anchor-after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-width {
+    padding: 0 15px;
+  }
+  
+  .link-desktop {
+    display: none;
+  }
+  
+  .link-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .link-desktop {
+    display: block;
+  }
+  
+  .link-mobile {
+    display: none;
+  }
+}
